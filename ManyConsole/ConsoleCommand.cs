@@ -7,8 +7,7 @@ namespace ManyConsole
     {
         public ConsoleCommand IsCommand(string command, string oneLineDescription = "")
         {
-            Command = command;
-            OneLineDescription = oneLineDescription;
+            DefineCommand(command, oneLineDescription);
             return this;
         }
 

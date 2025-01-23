@@ -77,6 +77,12 @@ namespace ManyConsole
             return result;
         }
 
+        protected internal void DefineCommand(string command, string oneLineDescription = "")
+        {
+            Command = command;
+            OneLineDescription = oneLineDescription;
+        }
+
         protected internal void SetAlias(string alias)
         {
             if (!String.IsNullOrEmpty(alias))

@@ -15,6 +15,11 @@ namespace ManyConsole
             return DispatchCommand(new[] { command }, arguments, consoleOut);
         }
 
+        public static Task<int> DispatchCommandAsync(BaseConsoleCommand command, string[] arguments, TextWriter consoleOut)
+        {
+            return DispatchCommandAsync(new[] { command }, arguments, consoleOut);
+        }
+
         public static Task<int> DispatchCommandAsync(IEnumerable<BaseConsoleCommand> commands, string[] arguments, TextWriter consoleOut, bool skipExeInExpectedUsage = false)
         {
             var commandStatus = GetCommandOrStatus(commands, arguments, consoleOut, skipExeInExpectedUsage);
